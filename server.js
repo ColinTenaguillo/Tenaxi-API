@@ -29,7 +29,7 @@ app.use(bodyParser.json());
 app.use(express.static("app/public"));
 
 const swaggerDocs = swaggerJsdoc(swaggerOptions)
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 apiStage(app, db);
 apiUser(app, db);
